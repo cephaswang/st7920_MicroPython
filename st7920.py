@@ -7,7 +7,11 @@ from canvas import Canvas
 rowBound = 64       # bytearray 'rows' - 64 rows -> 64bits
 colBound = 128//8   # 'cols' in each bytearray - 16 bytes -> 128bits
 
+
 """ EXAMPLE WIRING (MCU runs at 3.3V, so use VIN to get 5V)
+
+https://www.ruten.com.tw/item/show?21923637495764
+
         * GND   - 0V
         * VCC   - 5V                    - USB power VIN (not 3V3)
         * V0    - 5V                    - LCD contrast
