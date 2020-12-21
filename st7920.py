@@ -11,13 +11,13 @@ colBound = 128//8   # 'cols' in each bytearray - 16 bytes -> 128bits
 """ EXAMPLE WIRING (MCU runs at 3.3V, so use VIN to get 5V)
 
 https://www.ruten.com.tw/item/show?21923637495764
-
+esp8266
         * GND   - 0V
         * VCC   - 5V                    - USB power VIN (not 3V3)
         * V0    - 5V                    - LCD contrast
         * RS    - 5V 
-        * RW    - GPIO13 (Cockle pin7)  - SPI MOSI  
-        * E     - GPIO14 (Cockle pin5)  - SPI Clock
+        * RW    - GPIO13 (Cockle pin7)  - SPI MOSI  (esp32s-23)
+        * E     - GPIO14 (Cockle pin5)  - SPI Clock (esp32s-18)
         * PSB   - GND                   - Activate SPI
         * RST   - 5V                    - resetDisplay
         * BLA   - 5V                    - Backlight Anode

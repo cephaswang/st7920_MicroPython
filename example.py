@@ -2,7 +2,13 @@ from st7920 import Screen
 import machine
 
 # implicitly uses hardware spi; https://docs.micropython.org/en/latest/esp8266/esp8266/quickref.html#hardware-spi-bus
+
+# for esp8266
 spi = machine.SPI(1, baudrate=100000, polarity=1, phase=1)
+
+# for esp32s
+#spi = machine.SPI(2, baudrate=100000, polarity=1, phase=1, sck=machine.Pin(18), mosi=machine.Pin(23))
+
 screen = Screen(spi=spi)
 
 def clear():
