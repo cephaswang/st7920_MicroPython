@@ -7,6 +7,7 @@ from canvas import Canvas
 rowBound = 64       # bytearray 'rows' - 64 rows -> 64bits
 colBound = 128//8   # 'cols' in each bytearray - 16 bytes -> 128bits
 
+ScreenSize = (128, 160)
 
 """ EXAMPLE WIRING (MCU runs at 3.3V, so use VIN to get 5V)
 
@@ -28,6 +29,7 @@ esp8266
 class Screen(Canvas):
     def __init__(self, sck=None, mosi=None, miso=None, spi=None, resetDisplayPin=None, slaveSelectPin=None, baudrate=1800000):
 
+        self._size = ScreenSize
         self.cmdbuf = bytearray(33) # enough for 1 header byte plus 16 graphic bytes encoded as two bytes each
         self.cmdmv = memoryview(self.cmdbuf)
         
@@ -177,6 +179,8 @@ class Screen(Canvas):
             elif self.rot == 3:
                 self.fbuff[63 - x][y // 8] &= ~(1 << (7 - (y % 8)))
 
+
+    			
     def redraw(self, dx1=None, dy1=None, dx2=None, dy2=None):
         """
         # TODO CH bug here? (inherited from https://github.com/JMW95/pyST7920 ) buffer address ranges calculated incorrect for (bottom-right?) rectangles
