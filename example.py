@@ -22,10 +22,10 @@ def draw():
     screen.clear()
 
     # draw some points, lines, rectangles, filled rectangles in the buffer
-    #screen.plot(5, 5)
-    #screen.line(10, 10, 15, 15)
-    #screen.rect(20, 20, 25, 25)
-    #screen.fill_rect(30, 30, 40, 40)
+    screen.plot(5, 5)
+    screen.line(10, 10, 15, 15)
+    screen.rect(20, 20, 25, 25)
+    screen.fill_rect(30, 30, 40, 40)
     screen.fill_rect(32, 32, 38, 38, False)
     
     screen.text((1, 1), "Hello World", sysfont , 1)

@@ -49,25 +49,25 @@ class Canvas:
 ###################################################################
     def fillrect(self, x1, y1, aSize):
     
-        aStart = (x1,y1)
-        start = (clamp(aStart[0], 0, self._size[0]), clamp(aStart[1], 0, self._size[1]))
-        end = (clamp(start[0] + aSize[0] - 1, 0, self._size[0]), clamp(start[1] + aSize[1] - 1, 0, self._size[1]))
+#        aStart = (x1,y1)
+#        start = (clamp(aStart[0], 0, self._size[0]), clamp(aStart[1], 0, self._size[1]))
+#        end = (clamp(start[0] + aSize[0] - 1, 0, self._size[0]), clamp(start[1] + aSize[1] - 1, 0, self._size[1]))
 
-        if (end[0] < start[0]):
-        	tmp = end[0]
-        	end = (start[0], end[1])
-        	start = (tmp, start[1])
-        if (end[1] < start[1]):
-        	tmp = end[1]
-        	end = (end[0], start[1])
-        	start = (start[0], tmp)
+#        if (end[0] < start[0]):
+#        	tmp = end[0]
+#        	end = (start[0], end[1])
+#        	start = (tmp, start[1])
+#        if (end[1] < start[1]):
+#        	tmp = end[1]
+#        	end = (end[0], start[1])
+#        	start = (start[0], tmp)
         	
-	x1 = start[0]
-	y1 = start[1]
-	x2 = end[0]
-	y2 = end[1]
-	print("x1")
-	print(x1)
+#	x1 = start[0]
+#	y1 = start[1]
+#	x2 = end[0]
+#	y2 = end[1]
+#	print("x1")
+#	print(x1)
 		
     	# self.fill_rect(x1, y1, x2, y2, False)
     	self.plot(x1, y1, set=True)
