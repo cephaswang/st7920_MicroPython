@@ -1,3 +1,6 @@
+怎样开关LCD12864的背光以及调节其对比度？
+https://www.cnblogs.com/yuphone/archive/2011/04/16/2017669.html
+
 # Micropython ST7920
 
 Micropython library for simple graphic primitives on ST7920 128x64 monochrome LCD panel using ESP8266 and SPI
